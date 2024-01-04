@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown Timer..</title>
+    <style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+
+    }
+    div{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+     p{
+        height: 100px;
+        width: 500px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        line-height: 100px;
+        font-size: 60px;
+        margin-top: 0px;
+        box-shadow: 1px 1px 2px #b41616 ;
+
+     }
+
+    </style>
+  </head>
+  <body>
+
+
+
+  <div>
+    <h1>Top 2024 Sales</h1>
+    <p id="demo" onclick="">X</p>
+  </div>
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+    let Countdown=()=> {
+  let   future_date = new Date("dec 31 2024");
+  let  current_date = new Date()
+
+   let my_date = future_date - current_date;
+
+   let days =Math.floor (my_date /1000/60/60/24);
+
+   let hour = Math.floor(my_date /1000/60/60)%24;
+
+   let minute = Math.floor(my_date /1000/60)%60;
+
+   let Sec = Math.floor(my_date/1000)%60;
+
+
+
+       document.getElementById('demo').innerHTML =days +"d,"+hour+"h:"+minute+"m:"+Sec+"s"
+    }
+
+    Countdown()
+    setInterval(Countdown,1000)
+
+                            
+
+    </script>
+
+
+
+  </body>
+</html>
